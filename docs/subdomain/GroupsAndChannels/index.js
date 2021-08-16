@@ -299,25 +299,6 @@ function loadLinks(tableName) {
 
 }
 
-function move() {
-    var elem = document.getElementById("myBar");
-    var width = 0;
-    var time = 0;
-    var id = setInterval(frame, 10 * time);
-
-    function frame() {
-        if (width >= 100) {
-            clearInterval(id);
-            document.getElementById("results").style.display = "block";
-            elem.style.display = "none";
-        } else {
-            width++;
-            elem.style.width = width + '%';
-            elem.innerHTML = "Wait until load all links ";
-
-        }
-    }
-}
 
 function insertDropDow(CategoryName){
     var mainContent = document.getElementById("cMenu");
