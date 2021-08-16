@@ -1997,3 +1997,9 @@ footer a {
         width: 266px;
     }
 }
+
+.loadingImage {
+    margin: auto;
+    width: fit-content;
+    padding: 100px 0;
+}

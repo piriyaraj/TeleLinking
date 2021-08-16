@@ -38,18 +38,13 @@ function initHeader() {
                     </div>
                 </div>
             </div>
-            <!-- <div class="top-searchbar">
-                <form action="https://groupsor.link/group/search" method="get">
-                    <input type="text" name="keyword" placeholder="Type Keywords to Search" required=""><input type="submit" value="">
-                </form>
-            </div> -->
 
 
 
             <div style="position: fixed; top: 200px; left: 0px; ">
-                <a href="whatsapp://send?text=GroupSor - Enjoy Unlimited Whatsapp Group Links Invite to Join. Follow this link : https://groupsor.link/" data-action="share/whatsapp/share">
+                <a href="whatsapp://send?text=GroupSor - Enjoy Unlimited Whatsapp Group Links Invite to Join. Follow this link : https://groupsandchannels.telelinking.link/" data-action="share/whatsapp/share">
                     <img src="https://groupsor.link/assets/images/whatsapp.png" width="26" height="26" alt="Share on Whatsapp" title="Share on Whatsapp" rel="nofollow"></a><br>
-                <a href="https://twitter.com/intent/tweet?text=GroupSor - Enjoy Unlimited Whatsapp Group Links Invite to Join. Follow this link : &amp;url=https://groupsor.link/" target="_blank" rel="nofollow">
+                <a href="https://twitter.com/intent/tweet?text=GroupSor - Enjoy Unlimited Whatsapp Group Links Invite to Join. Follow this link : &amp;url=https://groupsandchannels.telelinking.link/" target="_blank" rel="nofollow">
                     <img src="https://groupsor.link/assets/images/twitter.jpg" width="26" height="26" alt="Share on Twitter" title="Share on Twitter"></a> <br>
             </div>
 
@@ -134,6 +129,18 @@ function initLoadMoreLink() {
     var tag = `<div style="margin-top: 10px;"> 
                 <button class="addbtn" id="LoadMoreLink" style="cursor: pointer;display:none;">Load more group</button>
             </div>`;
+    newSection.innerHTML = tag;
+    mainContent.appendChild(newSection); //append to the doc.body
+    mainContent.insertBefore(newSection, mainContent.lastChild)
+}
+
+function initLoadingImage() {
+    var mainContent = document.getElementById(articalSectionId);
+    newSection = document.createElement('section'); //create a div
+    newSection.className = "loadingImage";
+    newSection.id = "loadingImage";
+    // newSection.id = "LoadMoreLink";
+    var tag = `<img src="img/loader.gif" alt="loading telegram group links" title="loading group links" srcset="">`;
     newSection.innerHTML = tag;
     mainContent.appendChild(newSection); //append to the doc.body
     mainContent.insertBefore(newSection, mainContent.lastChild)
@@ -287,6 +294,7 @@ function loadLinks(tableName) {
                 // console.log(name, url);
         }
         // console.log(tableRow);
+        document.getElementById("loadingImage").style.display="none";
     });
 
 }
@@ -340,6 +348,8 @@ function dropDownmaker() {
             // console.log(k);
         }
         // console.log(tableRow);
+        document.getElementById("loadingImage").style.display="none";
+
     });
 
 }
@@ -355,20 +365,21 @@ function deletechild(){
 }
 function loadGroups(tableName){
     if(tableName!=""){
+        document.getElementById("loadingImage").style.display="block";
         currntTableName=tableName;
         deletechild();
         loadLinks(tableName);
+
     }
 }
 // initPreArtical();
-// initLoading();
 initHeader();
 initDropDown();
 initGroupLinks();
-// initAddGroup();
+initAddGroup();
 initLoadMoreLink();
+initLoadingImage();
 // initPostArtical();
-// move();
 loadLinks(currntTableName);
 dropDownmaker();
 
