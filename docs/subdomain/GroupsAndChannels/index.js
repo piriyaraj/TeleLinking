@@ -124,7 +124,7 @@ function initLoading() {
     newSection = document.createElement('section'); //create a div
     newSection.className = "loading";
     newSection.id = "loading"
-        var tag = `<img src="img/loading.gif" alt="loading group links" title="loading group links" srcset="">`;
+        var tag = `<img src="https://piriyaraj.github.io/TeleLinking/subdomain/GroupsAndChannels/img/loading.gif" alt="loading group links" title="loading group links" srcset="">`;
         newSection.innerHTML = tag;
     mainContent.appendChild(newSection); //append to the doc.body
     mainContent.insertBefore(newSection, mainContent.lastChild)
