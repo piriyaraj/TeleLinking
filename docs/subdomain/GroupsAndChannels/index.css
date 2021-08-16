@@ -386,10 +386,6 @@ body {
     left: 0px;
 }
 
-.box_content_center {
-    /* background: rgba(240, 239, 238, 0.74); */
-}
-
 a.boxclose {
     cursor: pointer;
     text-align: center;
@@ -510,10 +506,6 @@ a.boxclose {
 
 .rateit span:hover {
     background: url(../images/start-rateh.png) no-repeat 0px 0px;
-}
-
-.post-basic-info {
-    /*	padding: 7% 7% 5% 7%;*/
 }
 
 .post-basic-info h3 a {
@@ -1996,4 +1988,10 @@ footer a {
     #tiles li {
         width: 266px;
     }
+}
+
+.loading {
+    margin: auto;
+    width: fit-content;
+    padding: 100px 0;
 }
