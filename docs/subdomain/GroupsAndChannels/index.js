@@ -43,9 +43,9 @@ function initHeader() {
 
             <div style="position: fixed; top: 200px; left: 0px; ">
                 <a href="whatsapp://send?text=GroupSor - Enjoy Unlimited Whatsapp Group Links Invite to Join. Follow this link : https://groupsandchannels.telelinking.link/" data-action="share/whatsapp/share">
-                    <img src="https://groupsor.link/assets/images/whatsapp.png" width="26" height="26" alt="Share on Whatsapp" title="Share on Whatsapp" rel="nofollow"></a><br>
+                    <img src="https://piriyaraj.github.io/TeleLinking/subdomain/GroupsAndChannels/img/whatsapp.png" width="26" height="26" alt="Share on Whatsapp" title="Share on Whatsapp" rel="nofollow"></a><br>
                 <a href="https://twitter.com/intent/tweet?text=GroupSor - Enjoy Unlimited Whatsapp Group Links Invite to Join. Follow this link : &amp;url=https://groupsandchannels.telelinking.link/" target="_blank" rel="nofollow">
-                    <img src="https://groupsor.link/assets/images/twitter.jpg" width="26" height="26" alt="Share on Twitter" title="Share on Twitter"></a> <br>
+                    <img src="https://piriyaraj.github.io/TeleLinking/subdomain/GroupsAndChannels/img/twitter.jpg" width="26" height="26" alt="Share on Twitter" title="Share on Twitter"></a> <br>
             </div>
 
 
@@ -140,7 +140,7 @@ function initLoadingImage() {
     newSection.className = "loadingImage";
     newSection.id = "loadingImage";
     // newSection.id = "LoadMoreLink";
-    var tag = `<img src="img/loader.gif" alt="loading telegram group links" title="loading group links" srcset="">`;
+    var tag = `<img src="https://piriyaraj.github.io/TeleLinking/subdomain/GroupsAndChannels/img/loader.gif" alt="loading telegram group links" title="loading group links" srcset="">`;
     newSection.innerHTML = tag;
     mainContent.appendChild(newSection); //append to the doc.body
     mainContent.insertBefore(newSection, mainContent.lastChild)
@@ -183,10 +183,10 @@ var groupBlock = `
 
                                 <a class="joinbtn" style="vertical-align:top" href="whatsapp://send?text=Follow this link to Join my Telegram group : groupLink %0A %0AFind more Telegram group at: https://groupsor.link/ " data-action="share/whatsapp/share" rel="nofollow">Share on</a>
                                 <a href="whatsapp://send?text=Follow this link to Join my Telegram group : currentPostLink" data-action="share/whatsapp/share">
-                                    <img src="https://groupsor.link/assets/images/whatsapp.png" width="24" height="24" alt="Share on Whatsapp" title="Share on Whatsapp" rel="nofollow"></a>
+                                    <img src="https://piriyaraj.github.io/TeleLinking/subdomain/GroupsAndChannels/img/whatsapp.png" width="24" height="24" alt="Share on Whatsapp" title="Share on Whatsapp" rel="nofollow"></a>
 
                                 <a href="https://twitter.com/intent/tweet?text=Follow this link to Join my Telegram group : &amp;url=currentPostLink" target="_blank" rel="nofollow">
-                                    <img src="https://groupsor.link/assets/images/twitter.jpg" width="24" height="24" alt="Share on Twitter" title="Share on Twitter"></a>
+                                    <img src="https://piriyaraj.github.io/TeleLinking/subdomain/GroupsAndChannels/img/twitter.jpg" width="24" height="24" alt="Share on Twitter" title="Share on Twitter"></a>
                             </div>
                         </div>
                     </div>
