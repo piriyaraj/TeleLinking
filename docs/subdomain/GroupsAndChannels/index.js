@@ -1,7 +1,15 @@
 var articalSectionId = "root";
 var currntTableName="Actors";
 
-
+function initLoading() {
+    var mainContent = document.getElementById(articalSectionId);
+    newSection = document.createElement('section'); //create a div
+    newSection.className = "w3-light-grey";
+    var tag = `<div id="myBar" class="w3-container w3-cyan w3-center" style="width:0%;max-height:20px ;">0%</div>`;
+    newSection.innerHTML = tag;
+    mainContent.appendChild(newSection); //append to the doc.body
+    mainContent.insertBefore(newSection, mainContent.lastChild)
+}
 function initHeader() {
     var mainContent = document.getElementById(articalSectionId);
     newSection = document.createElement('section'); //create a div
@@ -73,8 +81,7 @@ function initAddGroup() {
 function initDropDown() {
     var mainContent = document.getElementById(articalSectionId);
     newSection = document.createElement('section'); //create a div
-    newSection.id = "dropDownMenu";
-    newSection.style.display="none";
+    // newSection.className = "w3-light-grey";
     var tag = `<div style="margin-bottom: 10px;text-align: center">
 
             <select class="selectbtn" name="categoryList" onchange="loadGroups(this.value);" id="cMenu">
@@ -118,19 +125,6 @@ function initPostArtical() {
     mainContent.appendChild(newSection); //append to the doc.body
     mainContent.insertBefore(newSection, mainContent.lastChild)
 }
-
-function initLoading() {
-    var mainContent = document.getElementById(articalSectionId);
-    newSection = document.createElement('section'); //create a div
-    newSection.className = "loading";
-    newSection.id = "loading"
-        var tag = `<img src="https://piriyaraj.github.io/TeleLinking/subdomain/GroupsAndChannels/img/loading.gif" alt="loading group links" title="loading group links" srcset="">`;
-        newSection.innerHTML = tag;
-    mainContent.appendChild(newSection); //append to the doc.body
-    mainContent.insertBefore(newSection, mainContent.lastChild)
-}
-
-
 
 function initLoadMoreLink() {
     var mainContent = document.getElementById(articalSectionId);
@@ -294,27 +288,24 @@ function loadLinks(tableName) {
         }
         // console.log(tableRow);
     });
-    
 
 }
 
-function Loading() {
-    initLoading(); 
-    var elem = document.getElementById("loading");
+function move() {
+    var elem = document.getElementById("myBar");
     var width = 0;
-    var time = 3;
+    var time = 0;
     var id = setInterval(frame, 10 * time);
 
     function frame() {
         if (width >= 100) {
-            console.log("finshed");
             clearInterval(id);
             document.getElementById("results").style.display = "block";
             elem.style.display = "none";
         } else {
-            console.log(width);
             width++;
-
+            elem.style.width = width + '%';
+            elem.innerHTML = "Wait until load all links ";
 
         }
     }
@@ -348,8 +339,6 @@ function dropDownmaker() {
             insertDropDow(k);
             // console.log(k);
         }
-        document.getElementById("loading").style.display='none';
-        document.getElementById("dropDownMenu").style.display='block';
         // console.log(tableRow);
     });
 
@@ -372,13 +361,14 @@ function loadGroups(tableName){
     }
 }
 // initPreArtical();
+// initLoading();
 initHeader();
 initDropDown();
 initGroupLinks();
-initAddGroup();
+// initAddGroup();
 initLoadMoreLink();
 // initPostArtical();
-initLoading();
+// move();
 loadLinks(currntTableName);
 dropDownmaker();
 
